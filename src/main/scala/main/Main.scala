@@ -33,6 +33,8 @@ object Main {
 
   private def exit(errorMessage: String): Unit = {
     System.err.println(errorMessage)
-    System.exit(1)
+    throw new RuntimeException(errorMessage)
+    // для тестов
+    // System.exit(1)
   }
 }
