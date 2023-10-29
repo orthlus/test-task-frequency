@@ -6,7 +6,7 @@ import java.nio.file.{Files, Paths}
 import scala.io.Source
 import scala.util.Using
 
-object Main {
+object ConsoleMain {
   def main(args: Array[String]): Unit = {
     val filePath = parseFilePathFromArgs(args)
     Using(Source.fromFile(filePath)) {
