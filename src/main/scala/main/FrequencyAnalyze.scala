@@ -5,8 +5,8 @@ import main.Symbols.{allowedSymbols, splitSymbol}
 object FrequencyAnalyze {
   def analyze(rows: Iterator[String]): Map[String, Int] =
     rows
-      .flatMap(row => rowToTokens(row))
-      .filterNot(s => s == "")
+      .flatMap(rowToTokens)
+      .filterNot(_ == "")
       .toSeq
       .groupBy(identity)
       .view
